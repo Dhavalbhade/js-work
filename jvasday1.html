@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head><h3>Day 1 js</h3></head>
+<body>
+    
+    
+    <h1 id="namedisp"></h1>
+    
+    <button type="button" onclick='showname()'>click here for my name</button>
+    
+
+    
+   
+<script>
+
+
+			function highest()
+			{
+				var num1, num2, num3;
+				num1 = Number(document.getElementById("A").value);
+				num2 = Number(document.getElementById("B").value);
+				num3 = Number(document.getElementById("C").value);
+
+				if(num1>num2 && num1>num3)
+				{
+                    document.getElementById("first").innerHTML ="Highest Number is "+ num1;
+				}
+				else if(num2>num1 && num2>num3)
+				{
+					document.getElementById("first").innerHTML ="Highest Number is "+ num2;
+				}
+				else if(num3>num1 && num3>num1)
+				{
+					document.getElementById("first").innerHTML ="Highest Number is "+ num3;
+				}
+            }
+        </script>        
+		
+        <h3>Calculate largest among three numbers</h3>
+		<br>
+		Enter number 1: <input type="text" id="A"></input><br>
+		Enter number 2: <input type="text" id="B"></input><br>
+		Enter number 3: <input type="text" id="C"></input><br>
+        <button onclick="highest()">OK</button>
+        <h1 id="first"></h1>
+        
+<script>    
+
+    function showname()
+    {
+        document.getElementById("namedisp").innerHTML ="Dhaval Bhade";
+        //document.getElementById("name").innerhtml ="Dhaval Bhade";
+        console.log("Dhaval Bhade");
+        alert("Dhaval Bhade");
+    }
+
+    function multiple()
+    {
+        document.getElementById("name1").innerHTML ="Dhaval Bhade";
+        document.getElementById("name2").innerHTML ="Dhaval Bhade";
+        document.getElementById("name3").innerHTML ="Dhaval Bhade";
+        document.getElementById("name4").innerHTML ="Dhaval Bhade";
+        document.getElementById("name5").innerHTML ="Dhaval Bhade";
+    }
+</script>
+<h1 id="name1"></h1>
+<h2 id="name2"></h2>
+<h3 id="name3"></h3>
+<h4 id="name4"></h4>
+<h5 id="name5"></h5>
+
+    <button type="button" onclick='multiple()'>click here</button>;
+      
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>Js Day2</h2>   
+
+<p id="demo1"></p>
+<button type="button" onclick="document.getElementById('demo1').innerHTML =
+'Dhaval Bhade'">Click here for my name</button><br>
+
+<p id="demo2"></p>
+<button type="button" onclick="document.getElementById('demo2').innerHTML =
+highest(arr)">click here for max no</button><br><br>
+
+
+<p id="demo3" style="display:none">Oh No!I am Dhaval Bhade</p>
+<button type="button" onclick="document.getElementById('demo3').style.display=
+'block'">Click here to see me</button><br>
+
+
+<p id="demo4" style.fontSize = medium">Dhaval Bhade</p>
+<button type="button" onclick="document.getElementById('demo4').style.fontSize =
+'xx-large'">click here for big size</button><br>
+
+<p id="demo5"></p>
+<button type="button" onclick="document.getElementById('demo5').innerHTML =
+Date()">what is current date and time.</button><br>
+
+
+<p id="demo6"></p>
+<button onclick="sorta(arr)">click here to ascending sort of array</button><br>
+
+<p id="demo7"></p>
+<button onclick="sortr(brr)">click here to descending sort of array</button><br>
+
+<p id="demo8"></p>
+<button onclick="check1(str)">click here to check @ is there?</button><br>
+
+<p id="demo9"></p>
+<button onclick="check2(btr)">click here to check its 10 digit no?</button><br>
+
+<p id="demo10"></p>
+<button onclick="random()">click here to generate random no.</button><br>
+
+
+
+
+<pre>
+<b>First</b>  :<input type="text" name="num1" id="num1"><br>
+<b>Second </b>:<input type="text" name="num2" id="num2"/></pre>
+<input type="button" value="click here to copy data" onClick="copy();" /><br><br>
+
+
+<script>
+    var arr = [0,1,2,3,4,5,6,7,8,9];
+    var brr = ["croton", "monstera", "jade", "palm", "pandanus"];
+    var str = "bhadedhaval@gmail.com";
+    var btr = "8879689096"
+    var max = 0;
+    function highest(arr)
+    { 
+        for (var i=0; i<10; i++)
+        {
+            if(arr[i]>max)
+               max = arr[i];
+        }
+        return max;
+    }
+
+    function copy()
+    {
+        var n1 = document.getElementById("num1");
+        var n2 = document.getElementById("num2");
+        n2.value = n1.value;
+    }
+
+    function sorta(arr)
+    {
+        arr.sort()
+        document.getElementById("demo6").innerHTML = arr;
+    }
+
+    function sortr(brr)
+    {
+        brr.reverse()
+        document.getElementById("demo7").innerHTML = brr;
+    }
+
+    function check1(str)
+    {
+        var loc= str.indexOf("@");
+        if(loc>0)
+        {document.getElementById("demo8").innerHTML = "yes";}
+        else
+        {document.getElementById("demo8").innerHTML = "No";}  
+    }
+
+    function check2(btr)
+    {
+        if(btr.lenght=10)
+        {document.getElementById("demo9").innerHTML = "yes";}
+        else
+        {document.getElementById("demo9").innerHTML = "No";}  
+    }
+
+    function random()
+    {
+        document.getElementById("demo10").innerHTML = Math.random();
+    }
+
+</script>
+
+
+</body>
+</html>

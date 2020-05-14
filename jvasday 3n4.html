@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>Factorial of no is:</h1>
+Number:<input type="text" id="num"> 
+<button onclick=facto()>Factorial</button>
+</input><input type="text" id="bd"></input>
+<h3>Account</h3>
+ <p id="account"></p>
+ <h3>Static</h3>
+ <p id="cube"></p>
+ <p id="square"></p>
+ <h3">Inheritance</h3>
+ <p id="in"></p>
+<script>
+var facto=()=>
+{
+    var i,n,fact=1;
+    n=Number(document.getElementById("num").value);
+ for(i=1;i<=n;i++)
+ {
+     fact=fact*i;
+ }
+ document.getElementById("bd").value=fact;
+}
+class Account
+{
+    constructor(nam,bal)
+    {
+        this.name=nam;
+        this.balance=20000;
+    }
+
+    deposit(x)
+    {
+      
+      this.balance=this.balance+x;
+    }
+    display()
+    {
+        return "<b>Name is</b>"+" "+this.name+"</br></br>"+ "<b>Initial Balance </b> is 30000 and after deposited 15000 balance is"+ " "+  this.balance;
+    }
+}
+obj1 =new Account("Dhaval");
+obj1.deposit(15000);
+document.getElementById("account").innerHTML = obj1.display();
+
+
+class Math
+{
+    static Cube(x)
+    {
+      return x*x*x;
+      
+    }
+    static Square(x)
+    {
+        return x*x;
+      
+    }
+   
+}
+
+document.getElementById("cube").innerHTML ="<b>Cube of 3 is:</b>"+ Math.Cube(3);
+document.getElementById("square").innerHTML ="<b>Square of 9 is:</b>"+ Math.Square(9);
+
+// now account class
+
+class account
+{
+    constructor(nam,bal)
+    {
+        this.name=nam;
+        this.balance=1000;
+    }
+
+    deposit(x)
+    {
+      
+      this.balance=this.balance+x;
+    }
+
+}
+class currentAccount extends account
+{
+    constructor(nam,bal)
+    {
+    super(nam,bal);
+    }
+     withdraw(a)
+     {
+         this.balance=this.balance-a;
+     }
+     show()
+    {
+        return "<b>Name is</b>"+" "+this.name+"</br></br>"+"<b>Total balance</b> is 1950 and after withdraw balance is:"+this.balance;
+    }
+}
+obj =new currentAccount("Dhaval");
+obj.deposit(950);
+obj.withdraw(1300);
+document.getElementById("in").innerHTML = obj.show();
+
+ </script>
+ </body>
+</html>

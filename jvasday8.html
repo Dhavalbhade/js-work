@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html>
+<body>
+<h2 id="demo">Hello</h2>
+
+<script>
+class Employee 
+{
+    constructor(id, name, sal) 
+    {
+        this.memberid = id;
+        this.name = name;
+        this.salary = sal;
+        this.netsalary = NULL;
+    }
+    GetNetSal() 
+    {
+        this.netsalary = (this.sal*12)-(0.1*this.sal);
+    }
+    set MemberId(x) 
+    {
+        this.memberid = x;
+    }
+    set Name(x) 
+    {
+        this.name = x;
+    }
+    set Salary(x) 
+    {
+        this.salary = x;
+    }
+    get MemberId()
+    { 
+    return this.memberid;
+    }
+    get Name()
+    { 
+    return this.name;
+    }
+    get Salary()
+    { 
+    return this.salary;
+    }
+    getdetails()
+    {
+    document.write(this.memberid);
+    document.write(this.name); 
+    document.write(this.salary);
+    document.write(this.netsalary);
+    }
+    
+}
+
+myEmp1 = new Employee(1, "Dhaval", 30000);
+myEmp2 = new Employee(2, "Neha", 50000);
+myEmp1.Salary = 45000;
+myEmp1.GetNetSal();
+myEmp1.getdetails();
+myEmp2.GetNetSal();
+myEmp2.getdetails();
+
+
+</script>         
+
+
+
+
+</body>
+</html>

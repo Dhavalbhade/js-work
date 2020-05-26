@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h4>Printing name by Self invoking function</h4>
+<p id="demo1"></p>
+<h4>printing Square of 5 by self invoking function</h4>
+<p id="demo2"></p>
+<h4>Addition of 2,3,5 by parameterless function</h4>
+<p id="demo3"></p>
+
+<script>
+(function () 
+{
+  document.getElementById("demo1").innerHTML = "Dhaval Bhade ";
+})();
+
+(function () {
+  document.getElementById("demo2").innerHTML = 5*5 ;
+})();
+
+function sum() {
+    var s = 0;
+    for (var i=0; i < arguments.length; i++) {
+        s += arguments[i];
+    }
+    return s;
+}
+document.getElementById("demo3").innerHTML =sum(2, 3, 5) ;
+
+</script>
+
+</body>
+</html>
+
+
